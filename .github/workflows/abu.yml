@@ -1,17 +1,17 @@
-name: Simple CI
+name: Run Manually
 
 on:
   workflow_dispatch:
 
 jobs:
-  hello:
+  manual-job:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
       - name: Print message
-        run: |
-          echo "Hello from GitHub Actions!"
-          echo "hi from second line"
+        run: echo "This workflow was run manually!"
+
+  manual-job-2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print message
+        run: echo "This workflow was run manually sometimes!"
